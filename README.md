@@ -14,3 +14,7 @@ When an event occurs the interested objects receive a message about the event.
 Reference
 ----
 [www.oodesign.com/observer-pattern.html](http://www.oodesign.com/observer-pattern.html)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ernestas-poskus/observer/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
