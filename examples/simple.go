@@ -35,6 +35,7 @@ func (b *Ball) GetPosition() *Position {
 func (b *Ball) SetPosition(p *Position) {
 	b.position = p
 	b.Notify(p)
+	fmt.Println("---------------")
 }
 
 // Player -
@@ -72,5 +73,7 @@ func main() {
 	ball.SetPosition(position)
 	ball.Detach(player3)
 	ball.SetPosition(NewPosition(2281, 2911, 1))
+	ball.Detach(player2)
+	ball.SetPosition(NewPosition(11, 23, 1))
 
 }
