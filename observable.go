@@ -4,9 +4,9 @@ package observer
 // for attaching and de-attaching observers to the client.
 // In the GOF book this class/interface is known as Subject.
 type ObservableInterface interface {
-	Attach(observer *Observer)
-	Detach(observer *Observer)
-	Notify(value ...interface{})
+	Attach(observer Observer)
+	Detach(observer Observer)
+	Notify(values ...interface{})
 }
 
 // Observable - concrete Observable class implements ObservableInterface.
