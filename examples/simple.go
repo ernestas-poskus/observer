@@ -54,7 +54,7 @@ func NewPlayer(name string, b *Ball) *Player {
 }
 
 // Update -
-func (p *Player) Update(values ...interface{}) {
+func (p *Player) Update(values interface{}) {
 	p.lastPosition = p.ball.GetPosition()
 	fmt.Printf("%s moves with ball to %d\n", p.name, p.lastPosition)
 }

@@ -6,7 +6,7 @@ package observer
 type ObservableInterface interface {
 	Attach(observer Observer)
 	Detach(observer Observer)
-	Notify(values ...interface{})
+	Notify(value interface{})
 }
 
 // Observable - concrete Observable class implements ObservableInterface.
@@ -31,8 +31,8 @@ func (observers *Observable) Detach(o Observer) {
 }
 
 // Notify - notifies all observers listening on object
-func (observers *Observable) Notify(values ...interface{}) {
+func (observers *Observable) Notify(value interface{}) {
 	for _, observer := range *observers {
-		observer.Update(values)
+		observer.Update(value)
 	}
 }
