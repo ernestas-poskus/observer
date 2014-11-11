@@ -21,10 +21,10 @@ func (observers *Observable) Attach(o Observer) {
 
 // Detach - removes given observer from observed object
 func (observers *Observable) Detach(o Observer) {
-	newObservable := []Observer{}
+	newObservable := Observable{}
 	for _, observer := range *observers {
 		if observer != o {
-			newObservable = append(newObservable, observer)
+			newObservable.Attach(observer)
 		}
 	}
 	*observers = newObservable
